@@ -29,7 +29,7 @@ function App() {
           <main className="flex-grow">
             <AnimatePresence mode="wait">
               <Switch key={location}>
-                <Route path="/" component={Home} />
+                <Route path="/onlyclick-website" component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/services" component={Services} />
                 <Route path="/how-it-works" component={HowItWorks} />
