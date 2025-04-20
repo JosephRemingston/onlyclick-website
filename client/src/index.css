@@ -7,7 +7,53 @@
     @apply border-border;
   }
 
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 16% 20%;
+
+    --primary: 205 93% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 168 88% 36%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 16% 95%;
+    --muted-foreground: 215 16% 45%;
+
+    --accent: 215 16% 95%;
+    --accent-foreground: 205 93% 46%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 16% 20%;
+
+    --border: 215 16% 90%;
+    --input: 215 16% 90%;
+  }
+
+  .dark {
+    --background: 215 16% 13%;
+    --foreground: 0 0% 100%;
+
+    --primary: 205 93% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 168 88% 36%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 16% 20%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 215 16% 20%;
+    --accent-foreground: 205 93% 46%;
+
+    --card: 215 16% 16%;
+    --card-foreground: 0 0% 100%;
+
+    --border: 215 16% 25%;
+    --input: 215 16% 25%;
+  }
+
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-foreground dark:bg-gray-900 dark:text-gray-100;
   }
 }

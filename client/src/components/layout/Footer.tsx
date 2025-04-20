@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <Link href="/">
-                <img src={logoImage} alt="OnlyClick Logo" className="h-10" />
+                <img src={logoImage} alt="OnlyClick Logo" className="h-8 md:h-9" />
               </Link>
             </div>
             <p className="text-gray-300 mb-6">

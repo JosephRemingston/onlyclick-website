@@ -57,7 +57,7 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <img src={logoImage} alt="OnlyClick Logo" className="h-10" />
+            <img src={logoImage} alt="OnlyClick Logo" className="h-8 md:h-9" />
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">

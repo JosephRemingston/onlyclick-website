@@ -20,7 +20,7 @@ function App() {
   const [location] = useLocation();
   
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <TooltipProvider>
         <Toaster />
         <ScrollToTop />
