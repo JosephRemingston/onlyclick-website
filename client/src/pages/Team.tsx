@@ -79,18 +79,18 @@ const Team = () => {
         />
       </Helmet>
       
-      <section className="pt-32 pb-16 bg-gray-50">
+      <section className="pt-32 pb-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Team</h1>
-            <p className="text-lg text-[#636E72] max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2D3436] dark:text-white">Our Team</h1>
+            <p className="text-lg text-[#636E72] dark:text-gray-300 max-w-3xl mx-auto">
               Meet the talented individuals building OnlyClick.
             </p>
           </AnimatedSection>
         </div>
       </section>
       
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -105,8 +105,8 @@ const Team = () => {
                 className="hover:-translate-y-2 transition-transform duration-300"
                 variants={itemVariants}
               >
-                <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-                  <div className="bg-gray-100">
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+                  <div className="bg-gray-100 dark:bg-gray-700">
                     <img
                       src={member.image}
                       alt={`${member.name} - ${member.position}`}
@@ -114,15 +114,15 @@ const Team = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                    <h3 className="text-xl font-semibold mb-1 text-[#2D3436] dark:text-white">{member.name}</h3>
                     <p className="text-[#0984E3] mb-3">{member.position}</p>
-                    <p className="text-[#636E72] text-sm">{member.description}</p>
+                    <p className="text-[#636E72] dark:text-gray-300 text-sm">{member.description}</p>
                     <div className="mt-4 flex space-x-3">
                       {member.socialLinks.map((link, i) => (
                         <a
                           key={i}
                           href={link.url}
-                          className="text-[#2D3436] hover:text-[#0984E3] transition-colors"
+                          className="text-[#2D3436] dark:text-gray-300 hover:text-[#0984E3] dark:hover:text-[#0984E3] transition-colors"
                         >
                           {link.icon}
                         </a>
@@ -136,38 +136,38 @@ const Team = () => {
         </div>
       </section>
       
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">Join Our Team</h2>
-            <p className="text-[#636E72] max-w-2xl mx-auto mb-8">
+            <h2 className="text-3xl font-bold mb-6 text-[#2D3436] dark:text-white">Join Our Team</h2>
+            <p className="text-[#636E72] dark:text-gray-300 max-w-2xl mx-auto mb-8">
               We're always looking for talented individuals to join our mission of transforming the home services industry.
             </p>
             <Link href="/contact">
-              <a className="inline-block px-8 py-3 bg-[#0984E3] text-white rounded-full hover:bg-[#0984E3]/90 transition-colors duration-300 font-medium">
+              <div className="inline-block px-8 py-3 bg-[#0984E3] text-white rounded-full hover:bg-[#0984E3]/90 transition-colors duration-300 font-medium cursor-pointer">
                 View Open Positions
-              </a>
+              </div>
             </Link>
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <AnimatedSection className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">Innovative Environment</h3>
-              <p className="text-[#636E72]">
+            <AnimatedSection className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold mb-3 text-[#2D3436] dark:text-white">Innovative Environment</h3>
+              <p className="text-[#636E72] dark:text-gray-300">
                 Work in a fast-paced, creative environment where your ideas are valued and implemented.
               </p>
             </AnimatedSection>
             
-            <AnimatedSection className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">Growth Opportunities</h3>
-              <p className="text-[#636E72]">
+            <AnimatedSection className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold mb-3 text-[#2D3436] dark:text-white">Growth Opportunities</h3>
+              <p className="text-[#636E72] dark:text-gray-300">
                 Continuous learning and career advancement opportunities as we expand across India.
               </p>
             </AnimatedSection>
             
-            <AnimatedSection className="bg-white p-6 rounded-xl shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">Impact Driven</h3>
-              <p className="text-[#636E72]">
+            <AnimatedSection className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold mb-3 text-[#2D3436] dark:text-white">Impact Driven</h3>
+              <p className="text-[#636E72] dark:text-gray-300">
                 Be part of a mission that's creating positive change in communities and lives.
               </p>
             </AnimatedSection>
