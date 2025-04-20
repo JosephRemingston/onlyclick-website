@@ -3,7 +3,6 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, Moon, Sun, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
-import logoImage from "@/assets/logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +56,9 @@ const Header = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <img src={logoImage} alt="OnlyClick Logo" className="h-8 md:h-9" />
+            <span className="text-2xl font-bold text-[#2D3436] dark:text-white">
+              Only<span className="text-[#0984E3]">Click</span>
+            </span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">

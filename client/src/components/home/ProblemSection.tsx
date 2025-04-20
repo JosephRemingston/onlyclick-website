@@ -27,11 +27,11 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">The Problems We Solve</h2>
-          <p className="text-[#636E72] max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#2D3436] dark:text-white">The Problems We Solve</h2>
+          <p className="text-[#636E72] dark:text-gray-300 max-w-2xl mx-auto">
             For both service providers and customers, the current system is broken. We're here to fix it.
           </p>
         </AnimatedSection>
@@ -61,8 +61,8 @@ const ProblemSection = () => {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-xl font-semibold mb-2">{problem.title}</h3>
-                    <p className="text-[#636E72]">{problem.description}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-[#2D3436] dark:text-white">{problem.title}</h3>
+                    <p className="text-[#636E72] dark:text-gray-300">{problem.description}</p>
                   </div>
                 </AnimatedSection>
               ))}

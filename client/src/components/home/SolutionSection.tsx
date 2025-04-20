@@ -53,11 +53,11 @@ const SolutionSection = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Solution</h2>
-          <p className="text-[#636E72] max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#2D3436] dark:text-white">Our Solution</h2>
+          <p className="text-[#636E72] dark:text-gray-300 max-w-2xl mx-auto">
             A comprehensive platform that bridges the gap between service providers and commercial spaces.
           </p>
         </AnimatedSection>
@@ -72,13 +72,13 @@ const SolutionSection = () => {
           {solutions.map((solution, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow duration-300 hover:-translate-y-1 transform transition-transform duration-300"
+              className="bg-white dark:bg-gray-700 rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow duration-300 hover:-translate-y-1 transform transition-transform duration-300"
               variants={itemVariants}
             >
               <div className="mb-6 text-[#0984E3]">{solution.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{solution.title}</h3>
-              <p className="text-[#636E72] mb-4">{solution.description}</p>
-              <ul className="space-y-2 text-[#636E72]">
+              <h3 className="text-xl font-semibold mb-3 text-[#2D3436] dark:text-white">{solution.title}</h3>
+              <p className="text-[#636E72] dark:text-gray-300 mb-4">{solution.description}</p>
+              <ul className="space-y-2 text-[#636E72] dark:text-gray-300">
                 {solution.features.map((feature, i) => (
                   <li key={i} className="flex items-center">
                     <svg
@@ -103,16 +103,16 @@ const SolutionSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
-            <h3 className="text-2xl font-semibold mb-6">Designed for Both Sides of the Market</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-[#2D3436] dark:text-white">Designed for Both Sides of the Market</h3>
             <div className="space-y-6">
               {marketSides.map((side, index) => (
                 <div key={index} className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#0984E3]/10 flex items-center justify-center text-[#0984E3]">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#0984E3]/10 dark:bg-[#0984E3]/20 flex items-center justify-center text-[#0984E3]">
                     {side.icon}
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-semibold text-lg">{side.title}</h4>
-                    <p className="text-[#636E72]">{side.description}</p>
+                    <h4 className="font-semibold text-lg text-[#2D3436] dark:text-white">{side.title}</h4>
+                    <p className="text-[#636E72] dark:text-gray-300">{side.description}</p>
                   </div>
                 </div>
               ))}
