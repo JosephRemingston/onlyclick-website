@@ -80,9 +80,9 @@ const ContactForm = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="bg-white p-8 rounded-xl shadow-sm"
+      className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-sm"
     >
-      <h3 className="text-2xl font-semibold mb-6">Send Us a Message</h3>
+      <h3 className="text-2xl font-semibold mb-6 text-[#2D3436] dark:text-white">Send Us a Message</h3>
       
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -91,12 +91,12 @@ const ContactForm = () => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Full Name</FormLabel>
+                <FormLabel className="text-[#2D3436] dark:text-white">Full Name</FormLabel>
                 <FormControl>
                   <Input 
                     placeholder="Your name" 
                     {...field} 
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0984E3] focus:border-transparent outline-none transition-all duration-300"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-[#0984E3] focus:border-transparent outline-none transition-all duration-300"
                   />
                 </FormControl>
                 <FormMessage />
@@ -109,13 +109,13 @@ const ContactForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email Address</FormLabel>
+                <FormLabel className="text-[#2D3436] dark:text-white">Email Address</FormLabel>
                 <FormControl>
                   <Input 
                     placeholder="your.email@example.com" 
                     type="email"
                     {...field} 
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0984E3] focus:border-transparent outline-none transition-all duration-300"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-[#0984E3] focus:border-transparent outline-none transition-all duration-300"
                   />
                 </FormControl>
                 <FormMessage />
@@ -128,13 +128,13 @@ const ContactForm = () => {
             name="subject"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Subject</FormLabel>
+                <FormLabel className="text-[#2D3436] dark:text-white">Subject</FormLabel>
                 <Select 
                   onValueChange={field.onChange} 
                   defaultValue={field.value}
                 >
                   <FormControl>
-                    <SelectTrigger className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0984E3] focus:border-transparent outline-none transition-all duration-300">
+                    <SelectTrigger className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-[#0984E3] focus:border-transparent outline-none transition-all duration-300">
                       <SelectValue placeholder="Select a subject" />
                     </SelectTrigger>
                   </FormControl>
@@ -155,13 +155,13 @@ const ContactForm = () => {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel className="text-[#2D3436] dark:text-white">Message</FormLabel>
                 <FormControl>
                   <Textarea 
                     placeholder="How can we help you?" 
                     {...field} 
                     rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0984E3] focus:border-transparent outline-none transition-all duration-300"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-white rounded-lg focus:ring-2 focus:ring-[#0984E3] focus:border-transparent outline-none transition-all duration-300"
                   />
                 </FormControl>
                 <FormMessage />
