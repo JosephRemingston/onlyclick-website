@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, Download } from "lucide-react";
+import logoImage from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,8 +11,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="mb-6">
-              <Link href="/" className="text-2xl font-bold">
-                Only<span className="text-[#0984E3]">Click</span>
+              <Link href="/">
+                <img src={logoImage} alt="OnlyClick Logo" className="h-10" />
               </Link>
             </div>
             <p className="text-gray-300 mb-6">
