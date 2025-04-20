@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, Download } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -80,6 +80,11 @@ const Footer = () => {
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/download" className="text-gray-300 hover:text-white transition-colors flex items-center">
+                  <Download className="h-4 w-4 mr-1" /> Download App
                 </Link>
               </li>
             </ul>

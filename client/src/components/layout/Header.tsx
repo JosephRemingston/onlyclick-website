@@ -1,14 +1,26 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [location] = useLocation();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // After mounting, we can safely show the theme toggle
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -37,14 +49,14 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300 ${
+      className={`fixed w-full z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm transition-all duration-300 ${
         isScrolled ? "py-2" : "py-4"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-[#2D3436]">
+            <span className="text-2xl font-bold text-[#2D3436] dark:text-white">
               Only<span className="text-[#0984E3]">Click</span>
             </span>
           </Link>
@@ -56,7 +68,7 @@ const Header = () => {
                   <li key={link.href}>
                     <Link 
                       href={link.href} 
-                      className={`text-[#2D3436] hover:text-[#0984E3] transition-colors duration-300 ${
+                      className={`text-[#2D3436] dark:text-gray-200 hover:text-[#0984E3] transition-colors duration-300 ${
                         location === link.href ? "font-medium text-[#0984E3]" : ""
                       }`}
                     >
@@ -66,21 +78,57 @@ const Header = () => {
                 ))}
               </ul>
             </nav>
-            <Link
-              href="/contact"
-              className="px-6 py-2 bg-[#0984E3] text-white rounded-full hover:bg-[#0984E3]/90 transition-colors duration-300"
-            >
-              Contact Us
-            </Link>
+            <div className="flex items-center space-x-4">
+              {mounted && (
+                <button
+                  onClick={toggleTheme}
+                  className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
+                  aria-label="Toggle dark mode"
+                >
+                  {theme === 'dark' ? (
+                    <Sun className="h-5 w-5 text-yellow-400" />
+                  ) : (
+                    <Moon className="h-5 w-5 text-[#2D3436]" />
+                  )}
+                </button>
+              )}
+              <Link
+                href="/download"
+                className="px-6 py-2 bg-[#00B894] text-white rounded-full hover:bg-[#00B894]/90 transition-colors duration-300 flex items-center"
+              >
+                <Download className="mr-2 h-4 w-4" /> Download App
+              </Link>
+              <Link
+                href="/contact"
+                className="px-6 py-2 bg-[#0984E3] text-white rounded-full hover:bg-[#0984E3]/90 transition-colors duration-300"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
 
-          <button
-            onClick={toggleMenu}
-            className="md:hidden text-[#2D3436] focus:outline-none"
-            aria-label="Toggle mobile menu"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="flex items-center md:hidden">
+            {mounted && (
+              <button
+                onClick={toggleTheme}
+                className="p-2 mr-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
+                aria-label="Toggle dark mode"
+              >
+                {theme === 'dark' ? (
+                  <Sun className="h-5 w-5 text-yellow-400" />
+                ) : (
+                  <Moon className="h-5 w-5 text-[#2D3436] dark:text-white" />
+                )}
+              </button>
+            )}
+            <button
+              onClick={toggleMenu}
+              className="text-[#2D3436] dark:text-white focus:outline-none"
+              aria-label="Toggle mobile menu"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         <AnimatePresence>
@@ -98,7 +146,7 @@ const Header = () => {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className={`block text-[#2D3436] hover:text-[#0984E3] transition-colors duration-300 ${
+                        className={`block text-[#2D3436] dark:text-gray-200 hover:text-[#0984E3] transition-colors duration-300 ${
                           location === link.href ? "font-medium text-[#0984E3]" : ""
                         }`}
                       >
@@ -106,6 +154,14 @@ const Header = () => {
                       </Link>
                     </li>
                   ))}
+                  <li>
+                    <Link
+                      href="/download"
+                      className="block px-6 py-2 bg-[#00B894] text-white rounded-full hover:bg-[#00B894]/90 transition-colors duration-300 w-fit flex items-center"
+                    >
+                      <Download className="mr-2 h-4 w-4" /> Download App
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       href="/contact"
