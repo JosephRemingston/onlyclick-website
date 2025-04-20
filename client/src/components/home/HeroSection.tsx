@@ -1,20 +1,37 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import useParallax from "@/hooks/useParallax";
+import { useRef, useState, useEffect } from "react";
 import { Download } from "lucide-react";
 
 const HeroSection = () => {
-  const parallaxEffect = useParallax({ speed: 0.2 });
-  const { current: refElement } = parallaxEffect;
+  const sectionRef = useRef<HTMLElement>(null);
+  const [offset, setOffset] = useState(0);
+  
+  // Simple parallax effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        setOffset(window.scrollY * 0.2);
+      }
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial calculation
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section
       className="pt-32 pb-20 md:pb-32 relative overflow-hidden"
-      ref={refElement}
+      ref={sectionRef}
     >
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-50/50 to-white dark:from-gray-900/50 dark:to-gray-800" 
+      <div 
+        className="absolute inset-0 z-0 bg-gradient-to-br from-gray-50/50 to-white dark:from-gray-900/50 dark:to-gray-800" 
         style={{ 
-          transform: `translateY(${parallaxEffect.offset}px)` 
+          transform: `translateY(${offset}px)` 
         }}
       />
       
