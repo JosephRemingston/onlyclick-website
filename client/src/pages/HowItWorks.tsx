@@ -21,56 +21,56 @@ const HowItWorks = () => {
         />
       </Helmet>
       
-      <section className="pt-32 pb-16 bg-gray-50">
+      <section className="pt-32 pb-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">How OnlyClick Works</h1>
-            <p className="text-lg text-[#636E72] max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2D3436] dark:text-white">How OnlyClick Works</h1>
+            <p className="text-lg text-[#636E72] dark:text-gray-300 max-w-3xl mx-auto">
               Our intuitive platform makes service management simple for both customers and providers.
             </p>
           </AnimatedSection>
         </div>
       </section>
       
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <CustomerJourney />
         </div>
       </section>
       
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <ProviderJourney />
         </div>
       </section>
       
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">Our Technology</h2>
-            <p className="text-[#636E72] max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6 text-[#2D3436] dark:text-white">Our Technology</h2>
+            <p className="text-[#636E72] dark:text-gray-300 max-w-2xl mx-auto">
               The OnlyClick platform is built with cutting-edge technology to ensure a seamless experience.
             </p>
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <AnimatedSection className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-3">Real-time Tracking</h3>
-              <p className="text-[#636E72]">
+            <AnimatedSection className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-3 text-[#2D3436] dark:text-white">Real-time Tracking</h3>
+              <p className="text-[#636E72] dark:text-gray-300">
                 Monitor your service requests in real-time with live updates on provider location and estimated arrival.
               </p>
             </AnimatedSection>
             
-            <AnimatedSection className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-3">Secure Payments</h3>
-              <p className="text-[#636E72]">
+            <AnimatedSection className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-3 text-[#2D3436] dark:text-white">Secure Payments</h3>
+              <p className="text-[#636E72] dark:text-gray-300">
                 Our platform ensures secure transactions with multiple payment options and transparent pricing.
               </p>
             </AnimatedSection>
             
-            <AnimatedSection className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-3">Smart Matching</h3>
-              <p className="text-[#636E72]">
+            <AnimatedSection className="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-3 text-[#2D3436] dark:text-white">Smart Matching</h3>
+              <p className="text-[#636E72] dark:text-gray-300">
                 Advanced algorithms match your service requests with the most qualified providers in your area.
               </p>
             </AnimatedSection>
@@ -78,7 +78,7 @@ const HowItWorks = () => {
         </div>
       </section>
       
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="bg-[#0984E3] rounded-xl p-8 md:p-12 text-white">
             <div className="text-center mb-8">
@@ -88,14 +88,14 @@ const HowItWorks = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/services">
-                  <a className="px-8 py-3 bg-white text-[#0984E3] rounded-full hover:bg-gray-100 transition-colors duration-300 font-medium">
+                  <div className="px-8 py-3 bg-white text-[#0984E3] rounded-full hover:bg-gray-100 transition-colors duration-300 font-medium cursor-pointer">
                     Explore Services
-                  </a>
+                  </div>
                 </Link>
                 <Link href="/contact">
-                  <a className="px-8 py-3 border border-white text-white rounded-full hover:bg-white/10 transition-colors duration-300 font-medium">
+                  <div className="px-8 py-3 border border-white text-white rounded-full hover:bg-white/10 transition-colors duration-300 font-medium cursor-pointer">
                     Contact Us
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

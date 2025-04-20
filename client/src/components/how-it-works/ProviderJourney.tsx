@@ -34,10 +34,10 @@ const ProviderJourney = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
       <div className="order-2 md:order-1">
         <AnimatedSection className="relative">
-          <div className="absolute -top-8 -left-8 w-32 h-32 bg-[#00B894]/10 rounded-full" />
-          <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-[#0984E3]/10 rounded-full" />
+          <div className="absolute -top-8 -left-8 w-32 h-32 bg-[#00B894]/10 dark:bg-[#00B894]/20 rounded-full" />
+          <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-[#0984E3]/10 dark:bg-[#0984E3]/20 rounded-full" />
           <motion.div
-            className="relative bg-white p-3 rounded-2xl shadow-xl overflow-hidden border border-gray-100"
+            className="relative bg-white dark:bg-gray-800 p-3 rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -54,7 +54,7 @@ const ProviderJourney = () => {
 
       <div className="order-1 md:order-2">
         <AnimatedSection>
-          <h3 className="text-2xl font-semibold mb-6">For Service Providers</h3>
+          <h3 className="text-2xl font-semibold mb-6 text-[#2D3436] dark:text-white">For Service Providers</h3>
           <div className="space-y-8">
             {steps.map((step) => (
               <div key={step.number} className="flex">
@@ -64,8 +64,8 @@ const ProviderJourney = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-semibold mb-2">{step.title}</h4>
-                  <p className="text-[#636E72]">{step.description}</p>
+                  <h4 className="text-lg font-semibold mb-2 text-[#2D3436] dark:text-white">{step.title}</h4>
+                  <p className="text-[#636E72] dark:text-gray-300">{step.description}</p>
                 </div>
               </div>
             ))}

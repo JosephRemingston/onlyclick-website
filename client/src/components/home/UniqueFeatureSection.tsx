@@ -26,11 +26,11 @@ const UniqueFeatureSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Unique Features</h2>
-          <p className="text-[#636E72] max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#2D3436] dark:text-white">Unique Features</h2>
+          <p className="text-[#636E72] dark:text-gray-300 max-w-2xl mx-auto">
             What makes OnlyClick stand out from the competition.
           </p>
         </AnimatedSection>
@@ -39,13 +39,13 @@ const UniqueFeatureSection = () => {
           {features.map((feature, index) => (
             <AnimatedSection
               key={index}
-              className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 hover:-translate-y-1 transform transition-transform duration-300"
+              className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 hover:-translate-y-1 transform transition-transform duration-300"
             >
-              <div className="flex items-center justify-center w-16 h-16 bg-[#0984E3]/10 rounded-full text-[#0984E3] mb-6">
+              <div className="flex items-center justify-center w-16 h-16 bg-[#0984E3]/10 dark:bg-[#0984E3]/20 rounded-full text-[#0984E3] mb-6">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-[#636E72]">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-[#2D3436] dark:text-white">{feature.title}</h3>
+              <p className="text-[#636E72] dark:text-gray-300">{feature.description}</p>
             </AnimatedSection>
           ))}
         </div>
