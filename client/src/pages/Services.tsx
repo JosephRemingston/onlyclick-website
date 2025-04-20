@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/shared/AnimatedSection";
-import { Zap, Droplet, Drill, Brush, Home, Wrench } from "lucide-react";
+import { Zap, Droplet, Drill, Brush, Home, Wrench, Download } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet";
 
@@ -105,10 +105,10 @@ const Services = () => {
                   ))}
                 </ul>
                 
-                <Link href="/contact">
-                  <a className="inline-block px-6 py-2 bg-[#0984E3]/10 text-[#0984E3] rounded-lg hover:bg-[#0984E3]/20 transition-colors duration-300 font-medium">
-                    Book Service
-                  </a>
+                <Link href="/download">
+                  <div className="inline-block px-6 py-2 bg-[#00B894]/10 text-[#00B894] rounded-lg hover:bg-[#00B894]/20 transition-colors duration-300 font-medium cursor-pointer flex items-center">
+                    <Download className="h-4 w-4 mr-2" /> Download App
+                  </div>
                 </Link>
               </AnimatedSection>
             ))}
