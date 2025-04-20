@@ -8,7 +8,7 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 const repoName = "onlyclick-website"; // <<< change this
 
 export default defineConfig({
-  base: `/`,
+  base: `/${repoName}/`,
   plugins: [
     react(),
     runtimeErrorOverlay(),
