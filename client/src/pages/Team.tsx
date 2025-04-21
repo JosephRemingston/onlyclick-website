@@ -3,6 +3,10 @@ import AnimatedSection from "@/components/shared/AnimatedSection";
 import { Linkedin, Twitter, GitPullRequest, Dribbble } from "lucide-react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet";
+import lohitImage from '../assets/lohit.jpg'; // Adjust the path as needed
+import subroImage from '../assets/subro.jpg'; // Import other images similarly
+import josephImage from '../assets/joseph.jpg';
+import srijaImage from '../assets/srija.jpg';
 
 const Team = () => {
   const teamMembers = [
@@ -10,7 +14,7 @@ const Team = () => {
       name: "Ch. Lohit",
       position: "Executive Member",
       description: "Leading the vision and strategic direction for OnlyClick.",
-      image: "./client/src/assets/lohit.jpg",
+      image: lohitImage,
       socialLinks: [
         { icon: <Linkedin className="h-5 w-5" />, url: "#" },
         { icon: <Twitter className="h-5 w-5" />, url: "#" },
@@ -21,7 +25,7 @@ const Team = () => {
       name: "Subro Ghose",
       position: "Frontend Developer",
       description: "Creating intuitive and responsive user interfaces for our platform.",
-      image: "./client/src/assets/subro.jpg",
+      image: subroImage,
       socialLinks: [
         { icon: <Linkedin className="h-5 w-5" />, url: "#" },
         { icon: <GitPullRequest className="h-5 w-5" />, url: "#" },
@@ -31,7 +35,7 @@ const Team = () => {
       name: "L. Joseph",
       position: "Backend Developer",
       description: "Building robust and scalable server architecture for OnlyClick.",
-      image: "./client/src/assets/joseph.jpg",
+      image: josephImage,
       socialLinks: [
         { icon: <Linkedin className="h-5 w-5" />, url: "#" },
         { icon: <GitPullRequest className="h-5 w-5" />, url: "#" },
@@ -41,7 +45,7 @@ const Team = () => {
       name: "Srija Ghosh",
       position: "UI/UX Developer",
       description: "Designing intuitive and delightful user experiences for our customers.",
-      image: "./client/src/assets/srija.jpg",
+      image: srijaImage,
       socialLinks: [
         { icon: <Linkedin className="h-5 w-5" />, url: "#" },
         { icon: <Dribbble className="h-5 w-5" />, url: "#" },
