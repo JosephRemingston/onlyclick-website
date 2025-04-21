@@ -10,7 +10,7 @@ const Team = () => {
       name: "Ch. Lohit",
       position: "Executive Member",
       description: "Leading the vision and strategic direction for OnlyClick.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
+      image: "./client/src/assets/lohit.jpg",
       socialLinks: [
         { icon: <Linkedin className="h-5 w-5" />, url: "#" },
         { icon: <Twitter className="h-5 w-5" />, url: "#" },
@@ -21,7 +21,7 @@ const Team = () => {
       name: "Subro Ghose",
       position: "Frontend Developer",
       description: "Creating intuitive and responsive user interfaces for our platform.",
-      image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
+      image: "./client/src/assets/subro.jpg",
       socialLinks: [
         { icon: <Linkedin className="h-5 w-5" />, url: "#" },
         { icon: <GitPullRequest className="h-5 w-5" />, url: "#" },
@@ -31,7 +31,7 @@ const Team = () => {
       name: "L. Joseph",
       position: "Backend Developer",
       description: "Building robust and scalable server architecture for OnlyClick.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
+      image: "./client/src/assets/joseph.jpg",
       socialLinks: [
         { icon: <Linkedin className="h-5 w-5" />, url: "#" },
         { icon: <GitPullRequest className="h-5 w-5" />, url: "#" },
@@ -41,7 +41,7 @@ const Team = () => {
       name: "Srija Ghosh",
       position: "UI/UX Developer",
       description: "Designing intuitive and delightful user experiences for our customers.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80",
+      image: "./client/src/assets/srija.jpg",
       socialLinks: [
         { icon: <Linkedin className="h-5 w-5" />, url: "#" },
         { icon: <Dribbble className="h-5 w-5" />, url: "#" },
